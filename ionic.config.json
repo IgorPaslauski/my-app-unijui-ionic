@@ -1,0 +1,8 @@
+{
+  "name": "my-app-unijui-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite",
+  "id": "d0b24c4e"
+}
