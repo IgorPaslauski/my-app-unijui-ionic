@@ -1,0 +1,49 @@
+.nav {
+  display: flex;
+  min-height: 2.5rem;
+  align-items: flex-start;
+  margin-right: 1.25rem;
+  overflow: hidden;
+  height: 2.5rem;
+  flex-direction: column;
+}
+
+.nav > div {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icon-children {
+  width: 1.25rem;
+  color: #5f6368;
+  fill: #5f6368;
+  transition: transform 0.2s;
+}
+.nav.ativo {
+  background-color: rgb(232, 240, 254);
+  border-radius: 0 2rem 2rem 0;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem 0.5rem 0;
+  fill: #5f6368;
+  color: #5f6368;
+}
+
+.nav-label {
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+}
+
+.nav-children {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 1.4rem;
+}
+
+.separador {
+  border-bottom: 1px solid rgb(218, 220, 224);
+  margin: 0.5rem 0;
+}

@@ -1,0 +1,23 @@
+.nav-bar {
+  border-right: 0.0625rem solid rgb(218, 220, 224);
+}
+
+.nav-bar:hover,
+.nav-bar.ativo {
+  width: 18.75rem;
+  min-width: 18.75rem;
+}
+
+.nav-bar ul {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.nav-bar.ativo .nav-icon-children {
+  transform: rotate(90deg);
+}
+
+.nav-bar.ativo .nav.filho,
+.nav-bar:hover .nav.filho {
+  height: fit-content;
+}

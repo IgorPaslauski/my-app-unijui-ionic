@@ -1,0 +1,10 @@
+.card-footer-btn {
+  width: 100%;
+  display: flex;
+  padding: 15px;
+  justify-content: flex-end;
+  gap: 15px;
+}
+.card-footer {
+  border-top: 0.0625rem solid rgb(218, 220, 224);
+}
