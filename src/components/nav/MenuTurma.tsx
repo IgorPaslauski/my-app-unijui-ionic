@@ -4,7 +4,7 @@ import { Aula } from "../models/Aula";
 import "./MenuTurma.css";
 
 const retornarDadosTurma = async (id: number) => {
-  const data = await fetch("http://localhost:8080/aula/" + id);
+  const data = await fetch("http://192.168.137.1:8080/aula/" + id);
   const aula = await data.json();
   return aula;
 };

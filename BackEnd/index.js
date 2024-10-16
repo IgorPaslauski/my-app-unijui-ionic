@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const { Pool } = require('pg');
 require('dotenv').config(); // Para carregar variáveis de ambiente
 
@@ -6,12 +7,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 // libera os cors
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    next();
-});
+app.use(cors());
 
 // Configurações do PostgreSQL
 const pool = new Pool({
@@ -27,11 +23,17 @@ const tratarErroConexao = async (req, res, callback) => {
         await callback(req, res);
     } catch (err) {
         console.error(err);
-        res.status(500).send(['Erro ao acessar o banco de dados']);
+        res.status(500).send(err);
     };
 };
 
 app.use(express.json());
+
+app.get('/teste', async (req, res) => {
+
+    res.json([{tet:'testeee'}]);
+
+});
 
 // Rota para listar usuários
 app.get('/usuarios', async (req, res) => {

@@ -8,21 +8,21 @@ import "./CardTurma.css";
 
 const retornarDadosUsuario = async (id: number) => {
   if (id === undefined) return {};
-  const data = await fetch(`http://localhost:8080/usuario/${id}`);
+  const data = await fetch(`http://192.168.137.1:8080/usuario/${id}`);
   const usuario = await data.json();
   return usuario;
 };
 
 const retornarTurma = async (id: number) => {
   if (id === undefined) return {};
-  const data = await fetch(`http://localhost:8080/aula/${id}`);
+  const data = await fetch(`http://192.168.137.1:8080/aula/${id}`);
   const turma = await data.json();
   return turma;
 };
 
 const retornarTarefas = async (id: number) => {
   if (id === undefined) return {};
-  const data = await fetch(`http://localhost:8080/tarefas/${id}`);
+  const data = await fetch(`http://192.168.137.1:8080/tarefas/${id}`);
   const tarefas = await data.json();
   return tarefas;
 };
