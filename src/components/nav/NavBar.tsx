@@ -4,7 +4,9 @@ import { Menu } from "./Menu";
 import "./NavBar.css";
 
 const retornarTurmas = async () => {
-  const data = await fetch("http://192.168.137.1:8080/aulas");
+  const data = await fetch(
+    "https://igorpaslauski.github.io/portifolio/data/aulas.json"
+  );
   const aulas = await data.json();
 
   return aulas;

@@ -8,21 +8,27 @@ import "./CardTurma.css";
 
 const retornarDadosUsuario = async (id: number) => {
   if (id === undefined) return {};
-  const data = await fetch(`http://192.168.137.1:8080/usuario/${id}`);
+  const data = await fetch(
+    `https://igorpaslauski.github.io/portifolio/data/usuario/${id}.json`
+  );
   const usuario = await data.json();
   return usuario;
 };
 
 const retornarTurma = async (id: number) => {
   if (id === undefined) return {};
-  const data = await fetch(`http://192.168.137.1:8080/aula/${id}`);
+  const data = await fetch(
+    `https://igorpaslauski.github.io/portifolio/data/aula/${id}.json`
+  );
   const turma = await data.json();
   return turma;
 };
 
 const retornarTarefas = async (id: number) => {
   if (id === undefined) return {};
-  const data = await fetch(`http://192.168.137.1:8080/tarefas/${id}`);
+  const data = await fetch(
+    `https://igorpaslauski.github.io/portifolio/data/tarefas/${id}.json`
+  );
   const tarefas = await data.json();
   return tarefas;
 };

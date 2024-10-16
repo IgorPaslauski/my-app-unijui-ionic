@@ -7,27 +7,11 @@ const ListaCardTurma: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-      const fetchData1 = async () => {
-        try {
-          const response = await fetch("http://192.168.137.1:8080/teste");
-          const json = await response.json();
-          alert("Dados recebidos:" + JSON.stringify(json));
-        } catch (error) {
-          alert("Erro na requisição de teste:" + error);
-        }
-      };
-
-      fetchData1();
-  
-
     const fetchData = async () => {
       try {
-        const data = await fetch("http://192.168.137.1:8080/aulas", {
-          method: "GET",
-          headers: {
-            accept: "application/json",
-          },
-        });
+        const data = await fetch(
+          "https://igorpaslauski.github.io/portifolio/data/aulas.json"
+        );
         if (!data.ok) {
           throw new Error(`HTTP error! status: ${data.status}`);
         }

@@ -32,7 +32,7 @@ const App: React.FC = () => (
       <HeaderPage />
       <div className="container-body">
         <NavBar />
-        <main style={{ width: "100%" }}>
+        <main style={{ width: "100%", overflow: "auto" }}>
           <Suspense fallback={<LoadingData />}>
             <ListaCardTurma />
           </Suspense>
